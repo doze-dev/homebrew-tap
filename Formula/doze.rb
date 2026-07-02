@@ -5,13 +5,13 @@
 class Doze < Formula
   desc "Real databases on your laptop — asleep until you need them"
   homepage "https://doze.nerdmenot.in"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/doze-dev/doze/releases/download/v0.1.0/doze_0.1.0_darwin_arm64.tar.gz"
-      sha256 "92a04e1ddcab3645dce715f1d0663a19ef40d265281fa9910d41d7d7f85290e2"
+      url "https://github.com/doze-dev/doze/releases/download/v0.1.1/doze_0.1.1_darwin_arm64.tar.gz"
+      sha256 "9b1f403d18deca5d02a4b95fbd9e79cb1498fb4fce2790bc1632626650fe4e3f"
 
       define_method(:install) do
         bin.install "doze"
@@ -21,15 +21,15 @@ class Doze < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/doze-dev/doze/releases/download/v0.1.0/doze_0.1.0_linux_amd64.tar.gz"
-      sha256 "d9b6957d241f085da86583b251943ef57cab8b07a9aae63ee6365ccfbd74bed4"
+      url "https://github.com/doze-dev/doze/releases/download/v0.1.1/doze_0.1.1_linux_amd64.tar.gz"
+      sha256 "ee7d26436071ddcec594c30f78764b03c2dbc8ecf9b0f50ea67ab7b1b04e16f8"
       define_method(:install) do
         bin.install "doze"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/doze-dev/doze/releases/download/v0.1.0/doze_0.1.0_linux_arm64.tar.gz"
-      sha256 "61d3e98bb0b78230dd3bbf5da9746b1bbd6b68dfd59ce7a015d89f04787dd97a"
+      url "https://github.com/doze-dev/doze/releases/download/v0.1.1/doze_0.1.1_linux_arm64.tar.gz"
+      sha256 "0a68923d64fc154c9fb80aa7d9474da44077e317212766684607b408bd2990aa"
       define_method(:install) do
         bin.install "doze"
       end
